@@ -1,0 +1,108 @@
+.container{
+    padding: 20px 0 60px;
+}
+.bottom-menu{
+    // border-top: 1px solid #999;
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 3px 3px 3px 3px #999;
+}
+  
+.wrapper-category{
+    overflow-x: auto;
+    position: relative;
+    white-space: nowrap;
+    padding: 30px 0 0;
+    .item-category{
+        width: 70px;
+        text-align: center;
+        padding: 0;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    img{
+        width: 40px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.list-item{
+    margin: 10px 0 0;
+    .item {
+        width: 100%;
+        clear: both;
+        display: block;
+        padding: 10px 0;
+        span{
+            font-size: 14px !important;
+            float: left;
+            margin: 10px;
+            color: #444;
+        }
+        .wrap-image{
+            height: 60px !important;
+            width: 60px !important;
+            overflow: hidden;
+            img.image{
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+    }
+}
+.product-detail{
+    .back-icon{
+        padding: 10px;
+        display: inline-table;
+    }
+    .image{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 0 10px !important;
+        background: #fff !important;
+    }
+    .share-button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    .wrapper-button-shares{
+        position: fixed;
+        top: 60px;
+        text-align: center;
+        padding: 10px;
+        min-height:30px;
+        border-radius: 4px;
+        background: #f2f2f2;
+        transition: 0.5s;
+
+        &.hide{
+            right: -60px;
+        }
+        &.display{
+            right: 30px;
+        }
+    }
+    .button{
+        float: right;
+    }
+}
+
+.favorit{
+    float: right;
+}
+.wrapper-product{
+    padding-top: 30px;
+    .card{
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+    }
+}
