@@ -21,6 +21,7 @@ export default class Layout extends Component {
   }
 
   render () {
+    const {getCart} = this.props
     return <Container fluid>
       <Grid columns={1}>
         <Grid.Row>
@@ -38,7 +39,7 @@ export default class Layout extends Component {
             Feed
           </Grid.Column>
           <Grid.Column>
-            <Link to={{pathname: '/app/cart', state: { prevPath: this.props.location.pathname }}}>Cart</Link>
+            <Link to={{pathname: '/app/cart', state: { prevPath: this.props.location.pathname }}}>Cart <b>{getCart.length > 0 && getCart.length}</b></Link>
           </Grid.Column>
           <Grid.Column>
             <Link to={{pathname: '/app/wishlist', state: { prevPath: this.props.location.pathname }}}>Profile</Link>
