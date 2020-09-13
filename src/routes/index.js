@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom'
+import { Route, Router, Redirect, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import history from 'reduxStore/history'
@@ -40,7 +40,7 @@ const Routes = ({ isAuthenticated = true }) => {
         <Router history={history}>
             <Switch>
             {/* <PrivateRoute path='/app' component={AppRoute} isAuthenticated={isAuthenticated} /> */}
-            <AppRoute />
+            <AppRoute path='/app' />
             <Route exact path='/' component={() => <Redirect to={'/app/catalog'} />} />
             <Route exact path='/login' component={LoginRoute} />
             <Route exact path='/logout' component={Logout} />
