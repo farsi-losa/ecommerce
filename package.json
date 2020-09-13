@@ -5,7 +5,7 @@
   "engines": {
     "node": "12.11.1"
   },
-  "homepage":".",
+  "homepage": ".",
   "dependencies": {
     "@reduxjs/toolkit": "^1.1.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -27,7 +27,8 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "start": "node server/server.js",
+    "start": "react-scripts start",
+    "start_": "node server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
