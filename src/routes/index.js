@@ -14,24 +14,24 @@ import { MODULE_ID, reducers, selectors } from './redux'
 
 import '../styles.scss'
 
-const PrivateRoute = ({ component: Component, isAuthenticated }, ...rest) => {
-  return <Route {...rest} render={props => (
-    isAuthenticated ? (
-      <Component {...props} />
-    ) : (
-      <Redirect to={{
-        pathname: '/login',
-        state: { from: props.location }
-      }} />
-    )
-  )} />
-}
+// const PrivateRoute = ({ component: Component, isAuthenticated }, ...rest) => {
+//   return <Route {...rest} render={props => (
+//     isAuthenticated ? (
+//       <Component {...props} />
+//     ) : (
+//       <Redirect to={{
+//         pathname: '/login',
+//         state: { from: props.location }
+//       }} />
+//     )
+//   )} />
+// }
 
-PrivateRoute.propTypes = {
-  isAuthenticated: PropTypes.bool,
-  location: PropTypes.object,
-  component: PropTypes.any
-}
+// PrivateRoute.propTypes = {
+//   isAuthenticated: PropTypes.bool,
+//   location: PropTypes.object,
+//   component: PropTypes.any
+// }
 
 const Routes = ({ isAuthenticated = true }) => {
 
@@ -39,7 +39,8 @@ const Routes = ({ isAuthenticated = true }) => {
     <div>
         <Router history={history}>
             <Switch>
-            <PrivateRoute path='/app' component={AppRoute} isAuthenticated={isAuthenticated} />
+            {/* <PrivateRoute path='/app' component={AppRoute} isAuthenticated={isAuthenticated} /> */}
+            <AppRoute />
             <Route exact path='/' component={() => <Redirect to={'/app/catalog'} />} />
             <Route exact path='/login' component={LoginRoute} />
             <Route exact path='/logout' component={Logout} />
